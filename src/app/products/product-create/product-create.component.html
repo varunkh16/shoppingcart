@@ -1,0 +1,13 @@
+<mat-card>
+    <form [formGroup]="form" (submit)="onSaveProduct()">
+        <mat-form-field>
+                <input matInput type="text" formControlName="title" placeholder="Enter Name">
+                <mat-error *ngIf="form.get('title').invalid">Please enter a product title.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+                <input matInput type="text" formControlName="content" placeholder="Enter Description">
+                <mat-error *ngIf="form.get('content').invalid">Please enter a product description.</mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="accent" type="submit">Add Product</button>
+    </form>
+</mat-card>
